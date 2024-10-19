@@ -11,6 +11,7 @@ The application is just a learn project, not a real project.
 - [How to config](#how-to-config-the-different-env-file)
 - [How to start](#how-to-start-the-project)
 - [Link](#link)
+- [Any problems ?](#any-problem-)
 
 ## Applications
 - **App Web** : Used for present the server, create user account or link it to the minecraft account, purchase vip items or rank and many more.
