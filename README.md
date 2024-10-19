@@ -44,6 +44,7 @@ The application is just a learn project, not a real project.
     - ![Docker Badge](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff&style=for-the-badge)
 
 ## How to config the different env files
+- Some of it, change the (ENV) by the env corresponding.
 
 - Gateway :
   - DATABASE_URL=postgresql://(POSTGRES_USER):(POSTGRES_PASSWORD)@babycube-db:5432/(POSTGRES_DB)
