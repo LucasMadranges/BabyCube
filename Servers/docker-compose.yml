@@ -1,0 +1,27 @@
+services:
+  # Sur la connexion de l'école, le lancement de Paper peut se bloquer
+  babycube-server:
+    container_name: server-mc
+    image: itzg/minecraft-server
+    tty: true
+    stdin_open: true
+    ports:
+      - "45000:25565"
+    depends_on:
+      - babycube-api
+    environment:
+      EULA: "TRUE"
+      MEMORY: 1024M
+      MAX_MEMORY: 2048M
+      TYPE: PAPER
+      DIFFICULTY: normal
+      MAX_PLAYERS: 12
+      SERVER_NAME: BabyCube
+      ICON: https://imgs.search.brave.com/IjiTjHc5xBFsuHyqfYc2fNP1f8qsb7UTVR9eKQMd6vs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/bGVtZGUuZnIvMjAy/NC8wNS8xOC8wLzAv/NDkwNS8zMjcwLzY2/NC8wLzc1LzAvMmRk/ZjRlN18yODg1YjMw/OWU4ZjY0YjM5OTI2/NTVjMTA4ZTMxMTM5/ZS0wLTVjNmI5ZjBl/NDMyYjQyMWZiYmRj/ZWUwYTI3MzM4YTkx/LmpwZw
+      ENABLE_RCON: true
+      RCON_PASSWORD: "/=a-59p-2K£N69okEtX;cg5FsZ'K^bwQWUXH3P<f=D(/(#4&!:"
+      RCON_PORT: 50000
+    volumes:
+      - ./data:/data
+    networks:
+      - networkBabyCube

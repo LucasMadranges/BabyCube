@@ -1,0 +1,11 @@
+include:
+  - ./Platform/Applications/docker-compose.yml
+  - ./Platform/Services/docker-compose.yml
+  - ./Platform/DB/docker-compose.yml
+  - ./Servers/docker-compose.yml
+
+networks:
+  networkBabyCube:
+    driver: bridge
+    name: networkBabyCube
+    

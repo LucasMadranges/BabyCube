@@ -1,0 +1,19 @@
+services:
+  babycube-api: 
+    image: node:22
+    container_name: api
+    working_dir: /app
+    volumes:
+      - ./Gateway:/app
+    ports:
+      - "4000:4000"
+    command: sh -c "npm install && npm run start:dev"
+    depends_on:
+      - babycube-db
+    env_file:
+      - ./Gateway/.env
+    networks:
+      - networkBabyCube
+
+volumes:
+  postgres-data:
