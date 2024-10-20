@@ -1,4 +1,3 @@
 .idea
 BabyCube.iml
-Servers/data/plugins/spark/tmp-client/spark-1666e081e5de-profile-data.jfr.tmp
-Servers/data/plugins/spark/tmp-client/spark-16668b89f137-libasyncProfiler.so.tmp
+Servers/data/plugins/spark/tmp-client/*.tmp
