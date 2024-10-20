@@ -1,1 +1,11 @@
-{"@type":"me.itzg.helpers.paper.PaperManifest","timestamp":"2024-10-19T14:09:38.047303514Z","files":["paper-1.21.1-123.jar"],"minecraftVersion":"1.21.1","project":"paper","build":123,"customDownloadUrl":null}
+{
+  "@type": "me.itzg.helpers.paper.PaperManifest",
+  "timestamp": "2024-10-20T09:54:45.339310714Z",
+  "files": [
+    "paper-1.21.1-123.jar"
+  ],
+  "minecraftVersion": "1.21.1",
+  "project": "paper",
+  "build": 123,
+  "customDownloadUrl": null
+}

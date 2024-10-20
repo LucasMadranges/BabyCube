@@ -1,13 +1,5 @@
-[14:09:58] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.4+7-LTS; Eclipse Adoptium Temurin-21.0.4+7) on Linux 6.10.4-linuxkit (aarch64)
-[14:09:58] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.1-123-master@aebbdc9 (2024-10-16T14:15:18Z) for Minecraft 1.21.1
-[14:09:59] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
-[14:10:03] [ServerMain/INFO]: [PluginInitializerManager] Initialized 0 plugins
-[14:10:33] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]
-[14:10:47] [ServerMain/INFO]: Loaded 1290 recipes
-[14:10:47] [ServerMain/INFO]: Loaded 1399 advancements
-[14:10:48] [Server thread/INFO]: Starting minecraft server version 1.21.1
-[14:10:48] [Server thread/INFO]: Loading properties
-[14:10:48] [Server thread/INFO]: This server is running Paper version 1.21.1-123-master@aebbdc9 (2024-10-16T14:15:18Z) (Implementing API version 1.21.1-R0.1-SNAPSHOT)
-[14:10:50] [Server thread/INFO]: [spark] This server bundles the spark profiler. For more information please visit https://docs.papermc.io/paper/profiling
-[14:10:50] [Server thread/INFO]: Server Ping Player Sample Count: 12
-[14:10:50] [Server thread/INFO]: Using 4 threads for Netty based IO
+[09:55:11] [ServerMain/INFO]: [bootstrap] Running Java 21 (OpenJDK 64-Bit Server VM 21.0.4+7-LTS; Eclipse Adoptium Temurin-21.0.4+7) on Linux 6.10.4-linuxkit (aarch64)
+[09:55:11] [ServerMain/INFO]: [bootstrap] Loading Paper 1.21.1-123-master@aebbdc9 (2024-10-16T14:15:18Z) for Minecraft 1.21.1
+[09:55:12] [ServerMain/INFO]: [PluginInitializerManager] Initializing plugins...
+[09:55:12] [ServerMain/INFO]: [PluginInitializerManager] Initialized 0 plugins
+[09:55:56] [ServerMain/INFO]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, name=PROD]

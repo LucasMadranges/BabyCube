@@ -8,8 +8,12 @@ The application is just a learn project, not a real project.
 ## Summary
 - [Applications](#applications)
 - [Stack](#stack)
-- [How to config](#how-to-config-the-different-env-file)
+- [How to config](#how-to-config-the-different-env-files)
 - [How to start](#how-to-start-the-project)
+  - [Back](#back-for-all-app)
+  - [App Web](#app-web)
+  - [App Mobile](#app-mobile)
+  - [App Desktop](#app-desktop)
 - [Link](#link)
 - [Any problems ?](#any-problem-)
 
@@ -19,17 +23,19 @@ The application is just a learn project, not a real project.
 - **App Desktop** : Used for administrate the list of items, forum, blogs for the moderators and administrators.
 
 ## Stack
-(non exhaustive-list)
+
+(non exhaustive list)
 - **App Web** :
     - ![Next.js Badge](https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=fff&style=for-the-badge)
     - ![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=for-the-badge)
     - ![Apollo GraphQL Badge](https://img.shields.io/badge/Apollo%20GraphQL-311C87?logo=apollographql&logoColor=fff&style=for-the-badge)
 
 - **App Mobile** :
-    - ![React Badge](https://img.shields.io/badge/React%20Native-61DAFB?logo=react&logoColor=000&style=for-the-badge)
+  - ![React Native Badge](https://img.shields.io/badge/React%20Native-61DAFB?logo=react&logoColor=000&style=for-the-badge)
 
 - **App Desktop** :
     - ![Electron Badge](https://img.shields.io/badge/Electron-47848F?logo=electron&logoColor=fff&style=for-the-badge)
+  - ![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=for-the-badge)
 
 - **Gateway and microservices** :
     - ![NestJS Badge](https://img.shields.io/badge/NestJS-E0234E?logo=nestjs&logoColor=fff&style=for-the-badge)
@@ -44,7 +50,8 @@ The application is just a learn project, not a real project.
     - ![Docker Badge](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff&style=for-the-badge)
 
 ## How to config the different env files
-- Some of it, change the (ENV) by the env corresponding.
+
+Some of it, change the (ENV) by the env corresponding.
 
 - Gateway :
   - DATABASE_URL=postgresql://(POSTGRES_USER):(POSTGRES_PASSWORD)@babycube-db:5432/(POSTGRES_DB)
@@ -56,6 +63,7 @@ The application is just a learn project, not a real project.
 
 ## How to start the project
 
+### Back (for all app)
 To start the entire project, you have to install docker and docker-compose on your computer :
 - [Docker](https://www.docker.com/)
 - [Docker compose](https://docs.docker.com/compose/)
@@ -64,14 +72,43 @@ Then, set your terminal on the root project and write this command :
 
 ```docker compose up --build```
 
-Launch it, the project will start quickly. Enjoy!
+Launch it, the project will start quickly and node_modules will be installed. Enjoy!
 
-## Link
+Go to [https://localhost:4000](https://localhost:4000) for the back. You should see something.
 
-- App Web : [https://localhost:3000](https://localhost:3000)
-- App Mobile : WIP
-- App Desktop : WIP
-- Gateway : [https://localhost:4000](https://localhost:4000)
+### App Web
+
+If you have launched the project with docker, go to [https://localhost:3000](https://localhost:3000) for the front. You
+should see something.
+
+### App Mobile
+
+Before launch the app, you have to install a simulator with Xcode (Apple) or Android Studio (Apple, Windows & Linux) on
+your computer.
+Or, you can install Expo go directly on your phone for testing the mobile app.
+
+Here a link to the documentation of React native to start
+with : [Environment setup - React Native](https://reactnative.dev/docs/environment-setup)
+
+When you have finished, open your terminal on the root project and write this command :
+
+```cd Platform/Applications/Mobile && npm i && npm run start```
+
+You should see something on your terminal with a list of commands with those three :
+
+- › Press a │ open Android
+- › Press i │ open iOS simulator
+- › Press w │ open web
+
+Press any touch has you want for test the app. Enjoy!
+
+### App Desktop
+
+Open your terminal on the root project and write this command :
+
+```cd Platform/Applications/Desktop && npm i && npm run start```
+
+You should see something appeared on your computer. Enjoy!
 
 ## Any problem ?
 
