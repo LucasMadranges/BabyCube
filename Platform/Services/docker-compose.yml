@@ -1,7 +1,7 @@
 services:
-  babycube-api: 
+  babycube-gateway:
     image: node:22
-    container_name: api
+    container_name: gateway
     working_dir: /app
     volumes:
       - ./Gateway:/app
@@ -14,6 +14,19 @@ services:
       - ./Gateway/.env
     networks:
       - networkBabyCube
-
-volumes:
-  postgres-data:
+  
+  babycube-users-service:
+    image: node:22
+    container_name: users-service
+    working_dir: /app
+    volumes:
+      - ./Users:/app
+    ports:
+      - "4001:4000"
+    command: sh -c "npm install && npm run start:dev"
+    depends_on:
+      - babycube-gateway
+    env_file:
+      - ./Users/.env
+    networks:
+      - networkBabyCube

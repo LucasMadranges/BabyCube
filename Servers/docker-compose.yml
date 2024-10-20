@@ -8,7 +8,7 @@ services:
     ports:
       - "45000:25565"
     depends_on:
-      - babycube-api
+      - babycube-gateway
     environment:
       EULA: "TRUE"
       MEMORY: 1024M
