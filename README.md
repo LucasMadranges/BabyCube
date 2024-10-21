@@ -6,36 +6,41 @@ By Lucas Madranges.
 The application is just a learn project, not a real project.
 
 ## Summary
+
 - [Applications](#applications)
 - [Stack](#stack)
 - [How to config](#how-to-config-the-different-env-files)
 - [How to start](#how-to-start-the-project)
-  - [Back](#back-for-all-app)
-  - [App Web](#app-web)
-  - [App Mobile](#app-mobile)
-  - [App Desktop](#app-desktop)
-- [Link](#link)
+    - [AppWeb + Gateway & Services + DB + Minecraft Server](#appweb--gateway--services--db--minecraft-server)
+        - [Gateway](#gateway)
+        - [AppWeb](#appweb)
+        - [Minecraft Server](#minecraft-server)
+    - [App Mobile](#app-mobile)
+    - [App Desktop](#app-desktop)
 - [Any problems ?](#any-problem-)
 
 ## Applications
-- **App Web** : Used for present the server, create user account or link it to the minecraft account, purchase vip items or rank and many more.
+
+- **App Web** : Used for present the server, create user account or link it to the minecraft account, purchase vip items
+  or rank and many more.
 - **App Mobile** : Used for see the statistics of each activity, and maybe purchase items.
 - **App Desktop** : Used for administrate the list of items, forum, blogs for the moderators and administrators.
 
 ## Stack
 
 (non exhaustive list)
+
 - **App Web** :
     - ![Next.js Badge](https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=fff&style=for-the-badge)
     - ![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=for-the-badge)
     - ![Apollo GraphQL Badge](https://img.shields.io/badge/Apollo%20GraphQL-311C87?logo=apollographql&logoColor=fff&style=for-the-badge)
 
 - **App Mobile** :
-  - ![React Native Badge](https://img.shields.io/badge/React%20Native-61DAFB?logo=react&logoColor=000&style=for-the-badge)
+    - ![React Native Badge](https://img.shields.io/badge/React%20Native-61DAFB?logo=react&logoColor=000&style=for-the-badge)
 
 - **App Desktop** :
     - ![Electron Badge](https://img.shields.io/badge/Electron-47848F?logo=electron&logoColor=fff&style=for-the-badge)
-  - ![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=for-the-badge)
+    - ![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=for-the-badge)
 
 - **Gateway and microservices** :
     - ![NestJS Badge](https://img.shields.io/badge/NestJS-E0234E?logo=nestjs&logoColor=fff&style=for-the-badge)
@@ -53,18 +58,41 @@ The application is just a learn project, not a real project.
 
 Some of it, change the (ENV) by the env corresponding.
 
-- Gateway :
-  - DATABASE_URL=postgresql://(POSTGRES_USER):(POSTGRES_PASSWORD)@babycube-db:5432/(POSTGRES_DB)
+- Platforms/Applications/AppWeb/.env.local :
 
-- Database :
-  - POSTGRES_USER
-  - POSTGRES_PASSWORD
-  - POSTGRES_DB
+```Nothing to do```
+
+- Platforms/Applications/Mobile/.env :
+
+```Nothing to do```
+
+- Platforms/Applications/Desktop/.env :
+
+```Nothing to do```
+
+- Platforms/Server/Services/.env :
+
+```
+DATABASE_URL=postgresql://(POSTGRES_USER):(POSTGRES_PASSWORD)@babycube-db:5432/(POSTGRES_DB)
+
+PORT_GATEWAY=4000 
+PORT_USERS=4001 
+```
+
+- Platforms/DB/.env :
+
+```
+POSTGRES_USER 
+POSTGRES_PASSWORD
+POSTGRES_DB
+```
 
 ## How to start the project
 
-### Back (for all app)
+### AppWeb + Gateway & Services + DB + Minecraft Server
+
 To start the entire project, you have to install docker and docker-compose on your computer :
+
 - [Docker](https://www.docker.com/)
 - [Docker compose](https://docs.docker.com/compose/)
 
@@ -74,12 +102,18 @@ Then, set your terminal on the root project and write this command :
 
 Launch it, the project will start quickly and node_modules will be installed. Enjoy!
 
+#### Gateway
+
 Go to [https://localhost:4000](https://localhost:4000) for the back. You should see something.
 
-### App Web
+#### AppWeb
 
-If you have launched the project with docker, go to [https://localhost:3000](https://localhost:3000) for the front. You
+Go to [https://localhost:3000](https://localhost:3000) for the front. You
 should see something.
+
+#### Minecraft Server
+
+Go to (your ip adress):45000 on Minecraft, the server should be online.
 
 ### App Mobile
 
@@ -112,4 +146,5 @@ You should see something appeared on your computer. Enjoy!
 
 ## Any problem ?
 
-Go to the issues section [here](https://github.com/LucasMadranges/BabyCube/issues) and create new issue if you see some bugs or problem on the project. Thanks!
+Go to the issues section [here](https://github.com/LucasMadranges/BabyCube/issues) and create new issue if you see some
+bugs or problem on the project. Thanks!
