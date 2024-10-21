@@ -1,6 +1,6 @@
 include:
   - ./Platform/Applications/docker-compose.yml
-  - ./Platform/Services/docker-compose.yml
+  - ./Platform/Server/docker-compose.yml
   - ./Platform/DB/docker-compose.yml
   - ./Servers/docker-compose.yml
 

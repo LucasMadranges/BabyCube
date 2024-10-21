@@ -1,7 +1,7 @@
 services:
-  babycube-services:
+  babycube-gateway:
     image: node:22
-    container_name: services
+    container_name: gateway
     working_dir: /app
     volumes:
       - ./Services:/app
@@ -9,8 +9,24 @@ services:
       - "4000:4000"
     command: sh -c "npm install && npm run start:dev"
     depends_on:
+      - babycube-users
+    env_file:
+      - ./Services/.env
+    networks:
+      - networkBabyCube
+  
+  babycube-users:
+    image: node:22
+    container_name: service-users
+    working_dir: /app
+    volumes:
+      - ./Services:/app
+    ports:
+      - "4001:4001"
+    command: sh -c "npm install && npm run start:dev users"
+    depends_on:
       - babycube-db
     env_file:
-      - .env
+      - ./Services/.env
     networks:
       - networkBabyCube
