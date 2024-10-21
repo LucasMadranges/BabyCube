@@ -1,6 +1,6 @@
 import {Module} from "@nestjs/common";
-import {UsersService} from "./users.service";
-import {UsersResolver} from "./users.resolver";
+import {PostsService} from "./posts.service";
+import {PostsResolver} from "./posts.resolver";
 import {GraphQLModule} from "@nestjs/graphql";
 import {ApolloFederationDriver, ApolloFederationDriverConfig} from "@nestjs/apollo";
 
@@ -13,7 +13,7 @@ import {ApolloFederationDriver, ApolloFederationDriverConfig} from "@nestjs/apol
             },
         }),
     ],
-    providers: [UsersResolver, UsersService],
+    providers: [PostsResolver, PostsService],
 })
-export class UsersModule {
+export class PostsModule {
 }
