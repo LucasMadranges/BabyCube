@@ -73,10 +73,15 @@ Some of it, change the (ENV) by the env corresponding.
 - Platforms/Server/Services/.env :
 
 ```
+NODE_ENV=dev
+
 DATABASE_URL=postgresql://(POSTGRES_USER):(POSTGRES_PASSWORD)@babycube-db:5432/(POSTGRES_DB)
 
-PORT_GATEWAY=4000 
-PORT_USERS=4001 
+PORT_GATEWAY=4000
+PORT_USERS=4001
+PORT_POSTS=4002
+
+APOLLO_KEY
 ```
 
 - Platforms/DB/.env :
