@@ -11,6 +11,7 @@ services:
     depends_on:
       - babycube-users
       - babycube-posts
+      - babycube-bridge
     env_file:
       - ./Services/.env
     networks:
@@ -41,6 +42,23 @@ services:
     ports:
       - "4002:4002"
     command: sh -c "npm install && npm run start:dev posts"
+    depends_on:
+      - babycube-db
+    env_file:
+      - ./Services/.env
+    networks:
+      - networkBabyCube
+
+
+  babycube-bridge:
+    image: node:22
+    container_name: service-minecraft
+    working_dir: /app
+    volumes:
+      - ./Services:/app
+    ports:
+      - "4003:4003"
+    command: sh -c "npm install && npm run start:dev minecraft"
     depends_on:
       - babycube-db
     env_file:

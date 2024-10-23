@@ -18,14 +18,11 @@ import * as process from "node:process";
             gateway: {
                 supergraphSdl: new IntrospectAndCompose({
                     subgraphs: [
-                        {
-                            name: "users",
-                            url: `http://babycube-users:${process.env.PORT_USERS}/graphql`,
-                        }, {
-                            name: "posts",
-                            url: `http://babycube-posts:${process.env.PORT_POSTS}/graphql`,
-                        },
+                        {name: "users", url: `http://babycube-users:${process.env.PORT_USERS}/graphql`},
+                        {name: "posts", url: `http://babycube-posts:${process.env.PORT_POSTS}/graphql`},
+                        {name: "minecraft", url: `http://babycube-bridge:${process.env.PORT_MINECRAFT}/graphql`},
                     ],
+                    ...(process.env.NODE_ENV === "dev" && {pollIntervalInMs: 5000}), // Active le polling seulement en mode dev
                 }),
             },
         }),

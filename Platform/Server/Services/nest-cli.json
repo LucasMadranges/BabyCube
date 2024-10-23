@@ -36,6 +36,15 @@
       "compilerOptions": {
         "tsConfigPath": "apps/posts/tsconfig.app.json"
       }
+    },
+    "minecraft": {
+      "type": "application",
+      "root": "apps/minecraft",
+      "entryFile": "main",
+      "sourceRoot": "apps/minecraft/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/minecraft/tsconfig.app.json"
+      }
     }
   }
 }

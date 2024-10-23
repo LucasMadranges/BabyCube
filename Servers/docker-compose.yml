@@ -1,7 +1,7 @@
 services:
   # Sur la connexion de l'école, le lancement de Paper peut se bloquer
-  babycube-server:
-    container_name: server-mc
+  babycube-minecraft:
+    container_name: minecraft-server
     image: itzg/minecraft-server
     tty: true
     stdin_open: true
