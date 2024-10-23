@@ -22,7 +22,6 @@ import * as process from "node:process";
                         {name: "posts", url: `http://babycube-posts:${process.env.PORT_POSTS}/graphql`},
                         {name: "minecraft", url: `http://babycube-bridge:${process.env.PORT_MINECRAFT}/graphql`},
                     ],
-                    ...(process.env.NODE_ENV === "dev" && {pollIntervalInMs: 5000}), // Active le polling seulement en mode dev
                 }),
             },
         }),

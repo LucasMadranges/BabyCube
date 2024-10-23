@@ -83,6 +83,8 @@ PORT_POSTS=4002
 PORT_MINECRAFT=4003
 
 APOLLO_KEY
+
+RCON_PASSWORD
 ```
 
 - Platforms/DB/.env :
@@ -91,6 +93,12 @@ APOLLO_KEY
 POSTGRES_USER 
 POSTGRES_PASSWORD
 POSTGRES_DB
+```
+
+- Servers/.env :
+
+```
+RCON_PASSWORD
 ```
 
 ## How to start the project

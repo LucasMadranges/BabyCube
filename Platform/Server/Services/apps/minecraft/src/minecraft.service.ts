@@ -6,16 +6,21 @@ const Rcon = require("rcon");  // Utilisation de require pour importer le module
 export class MinecraftService {
     callRcon() {
         try {
-            /*            const rcon = new Rcon("localhost", 50000, "/=a-59p-2K£N69okEtX;cg5FsZ'K^bwQWUXH3P<f=D(/(#4&!:");
-            
-                        rcon.on("auth", () => {
-                            console.log(rcon.send("list"));
-                            rcon.send("list");  // Exemple de commande pour lister les joueurs connectés
-                        });*/
+            const rcon = new Rcon("babycube-minecraft", 50000, process.env.RCON_PASSWORD);
 
+            rcon.on("auth", () => {
+                console.log("Authenticated");
+                rcon.send("list");  // Exemple de commande pour lister les joueurs connectés
+            });
+
+            rcon.on("response", (response) => {
+                console.log("Server response:", response);
+            });
+
+            rcon.connect();  // Important de démarrer la connexion
             return "Rcon connected";
         } catch (error) {
-            throw new Error(error);
+            throw new Error(error.message);
         }
     }
 }
