@@ -29,6 +29,7 @@
     "@nestjs/platform-express": "^10.0.0",
     "apollo-server-express": "^3.13.0",
     "graphql": "^16.9.0",
+    "rcon": "^1.1.0",
     "reflect-metadata": "^0.2.0",
     "rxjs": "^7.8.1"
   },
