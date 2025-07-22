@@ -1,0 +1,16 @@
+name: homeTeleport
+version: '1.0-SNAPSHOT'
+main: DevMinecraft.homeTeleport.HomeTeleport
+api-version: '1.21'
+authors: [ Lucas Madranges ]
+description: Plugins for home teleport.
+commands:
+  home:
+    description: Prefix home command
+    usage: /<command>
+    permission: home.usage
+
+permissions:
+  home:
+    usage:
+      default: op

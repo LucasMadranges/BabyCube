@@ -1,0 +1,45 @@
+# Project exclude paths
+/.gradle/
+/build/
+/.idea/
+/.kotlin/
+
+# Catrain
+/plugins/catrain/build/
+
+# Heal
+/plugins/heal/build/
+
+# Random Teleport
+/plugins/randomTeleport/build/
+
+# Welcome
+/plugins/welcome/build/
+
+# Invisible
+/plugins/invisible/build/
+
+# AntiJump
+/plugins/anti-jump/build/
+
+# PlayerList
+/plugins/playerList/build/
+
+# Sidebar
+/plugins/sideBar/build/
+
+# HomeTeleport
+/plugins/homeTeleport/build/
+
+# CreateWorld
+/plugins/world/build/
+
+# DoubleJump
+/plugins/doubleJump/build/
+
+# Run
+/run/build/
+/run/logs
+/run/run/*
+!run/run/eula.txt
+!run/run/server.properties

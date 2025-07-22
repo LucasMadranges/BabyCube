@@ -1,0 +1,16 @@
+name: World
+version: '1.0-SNAPSHOT'
+main: DevMinecraft.world.World
+api-version: '1.21.8'
+authors: [ Lucas Madranges ]
+description: Plugin for generate and teleport into new world
+commands:
+  world:
+    description: Prefix for world plugin
+    usage: /<command>
+    permission: world.usage
+
+permissions:
+  world:
+    usage:
+      default: op
