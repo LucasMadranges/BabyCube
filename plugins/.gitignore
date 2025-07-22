@@ -43,3 +43,4 @@
 /run/run/*
 !run/run/eula.txt
 !run/run/server.properties
+!run/run/Dockerfile
