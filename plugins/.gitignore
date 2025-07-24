@@ -37,10 +37,14 @@
 # DoubleJump
 /plugins/doubleJump/build/
 
-# Run
+# Run - World
+maps
 /run/build/
 /run/logs
 /run/run/*
 !run/run/eula.txt
 !run/run/server.properties
 !run/run/Dockerfile
+
+!run/run/world
+!run/run/world_pvp_arena
