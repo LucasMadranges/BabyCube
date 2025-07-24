@@ -4,8 +4,11 @@ import org.bukkit.command.Command
 import org.bukkit.command.CommandExecutor
 import org.bukkit.command.CommandSender
 import org.bukkit.entity.Player
+import org.bukkit.inventory.ItemStack
 
-class DoubleJumpCommand(private var isDoubleJumpEnabled: Boolean) : CommandExecutor {
+class DoubleJumpCommand(
+    private val item: ItemStack
+) : CommandExecutor {
     override fun onCommand(
         sender: CommandSender,
         command: Command,
@@ -13,13 +16,8 @@ class DoubleJumpCommand(private var isDoubleJumpEnabled: Boolean) : CommandExecu
         args: Array<out String>
     ): Boolean {
         if (sender is Player && sender.isOp) {
-            if (isDoubleJumpEnabled) {
-                isDoubleJumpEnabled = false
-                sender.sendMessage("§aLe double jump est maintenant désactivé.")
-            } else {
-                isDoubleJumpEnabled = true
-                sender.sendMessage("§aLe double jump est maintenant activé.")
-            }
+            sender.inventory.addItem(item)
+            sender.sendMessage("§aTu as reçu les bottes de Double Jump !")
             return true
         } else {
             sender.sendMessage("§cCette commande ne peut être utilisée que par un opérateur.")

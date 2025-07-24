@@ -5,16 +5,19 @@ import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.player.PlayerMoveEvent
 import org.bukkit.event.player.PlayerToggleFlightEvent
+import org.bukkit.plugin.java.JavaPlugin
 
-class DoubleJumpEvent(private val isDoubleJumpEnabled: Boolean) : Listener {
+class DoubleJumpEvent(private val plugin: JavaPlugin) : Listener {
+
     @EventHandler
     fun onPlayerMove(event: PlayerMoveEvent) {
-        if (isDoubleJumpEnabled) return
-
         val player = event.player
 
         if (player.gameMode == GameMode.CREATIVE) return
 
+        val hasDoubleJumpBoots = DoubleJumpItems.hasDoubleJumpBoots(player, plugin)
+        if (!hasDoubleJumpBoots) return
+        
         val onGround = player.location.clone().subtract(0.0, 0.1, 0.0).block.type.isSolid
 
         if (onGround) {
@@ -25,11 +28,15 @@ class DoubleJumpEvent(private val isDoubleJumpEnabled: Boolean) : Listener {
     @EventHandler
     fun onPlayerDoubleJump(event: PlayerToggleFlightEvent) {
         val player = event.player
+
         if (player.gameMode == GameMode.CREATIVE) return
 
         event.isCancelled = true
         player.allowFlight = false
         player.isFlying = false
+
+        val hasDoubleJumpBoots = DoubleJumpItems.hasDoubleJumpBoots(player, plugin)
+        if (!hasDoubleJumpBoots) return
 
         val boost = player.location.direction.multiply(1.1).setY(0.9)
         player.velocity = boost
@@ -37,12 +44,12 @@ class DoubleJumpEvent(private val isDoubleJumpEnabled: Boolean) : Listener {
         player.world.playSound(player.location, "entity.player.small_fall", 0.5f, 1.2f)
 
         val particleLocationArr = arrayOf(
-            // NOTE : Nord Sud Est Ouest
+            // Nord Sud Est Ouest
             player.location.clone().add(0.25, -0.1, -0.25),
             player.location.clone().add(0.25, -0.1, 0.25),
             player.location.clone().add(-0.25, -0.1, -0.25),
             player.location.clone().add(-0.25, -0.1, 0.25),
-            // NOTE : Corner
+            // Corners
             player.location.clone().add(0.35, -0.1, 0.0),
             player.location.clone().add(-0.35, -0.1, 0.0),
             player.location.clone().add(0.0, -0.1, -0.35),
@@ -61,5 +68,4 @@ class DoubleJumpEvent(private val isDoubleJumpEnabled: Boolean) : Listener {
             )
         }
     }
-
 }
