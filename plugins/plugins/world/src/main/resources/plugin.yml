@@ -9,8 +9,15 @@ commands:
     description: Prefix for world plugin
     usage: /<command>
     permission: world.usage
+  spawn:
+    description: Teleport to spawn server
+    usage: /<command>
+    permission: spawn.usage
 
 permissions:
   world:
     usage:
       default: op
+  spawn:
+    usage:
+      default: true

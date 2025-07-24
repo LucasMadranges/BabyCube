@@ -7,10 +7,6 @@ class Tp {
     fun teleportToWorld(player: Player, worldName: String) {
         val world = Bukkit.getWorld(worldName)
 
-        println(Bukkit.getWorlds())
-        println(player.server.worlds)
-        println(player.server.worldContainer)
-
         if (world == null) {
             player.sendMessage("§cLe monde $worldName n'existe pas.")
             return

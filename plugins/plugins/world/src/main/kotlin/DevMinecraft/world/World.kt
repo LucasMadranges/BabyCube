@@ -8,7 +8,10 @@ class World : JavaPlugin() {
 
     override fun onEnable() {
         loadWorlds()
+        WorldItems().enableNavigationCompass(this)
+        server.pluginManager.registerEvents(WorldEvent(this), this)
         getCommand("world")?.setExecutor(WorldCommand())
+        getCommand("spawn")?.setExecutor(WorldSpawnCommand())
     }
 
     fun loadWorlds() {
