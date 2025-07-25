@@ -1,50 +1,44 @@
-name: ✨ Nouvelle fonctionnalité
-description: Proposer une nouvelle feature ou amélioration
+name: ✨ New Feature
+description: Propose a new feature or improvement
 labels: [ Features ]
 body:
   - type: dropdown
-    id: projet
+    id: project
     attributes:
-      label: Projet concerné
+      label: Relevant Project
       options:
-        - AppWeb
-        - AppMobile
+        - WebApp
+        - MobileApp
         - Desktop
         - API
         - Minecraft
         - Docs
-      description: À quel projet cette fonctionnalité s’applique ?
+      description: Which project does this feature apply to?
     validations:
       required: true
-
   - type: input
-    id: titre
+    id: title
     attributes:
-      label: Titre
-      placeholder: "Ex : Ajouter la recherche avancée"
+      label: Title
+      placeholder: "E.g.: Add advanced search functionality"
     validations:
       required: true
-
   - type: textarea
-    id: besoin
+    id: need
     attributes:
-      label: Quel est le besoin ?
-      placeholder: "Décris le problème que cette fonctionnalité résout."
+      label: What is the need?
+      placeholder: "Describe the problem this feature solves."
     validations:
       required: true
-
   - type: textarea
     id: solution
     attributes:
-      label: Description de la solution
-      placeholder: "Décris comment la fonctionnalité pourrait fonctionner."
+      label: Solution Description
+      placeholder: "Describe how the feature could work."
     validations:
       required: true
-
   - type: textarea
     id: extra
     attributes:
-      label: Informations complémentaires
-      placeholder: "Captures d’écran, références, exemples..."
-    validations:
-      required: false
+      label: Additional Information
+      placeholder: "Screenshots, references, examples..."
