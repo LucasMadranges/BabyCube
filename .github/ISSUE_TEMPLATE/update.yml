@@ -7,8 +7,8 @@ body:
     attributes:
       label: Relevant Project
       options:
-        - WebApp
-        - MobileApp
+        - Web
+        - Mobile
         - Desktop
         - API
         - Minecraft
