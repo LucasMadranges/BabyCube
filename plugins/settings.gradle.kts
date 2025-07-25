@@ -12,5 +12,7 @@ include(
     "plugins:homeTeleport",
     "plugins:world",
     "plugins:doubleJump",
+    // NOTE : Mini-games
+    "plugins:pvpArena",
     "run"
 )
