@@ -16,6 +16,7 @@ body:
       description: Which project does this feature apply to?
     validations:
       required: true
+
   - type: input
     id: title
     attributes:
@@ -23,6 +24,7 @@ body:
       placeholder: "E.g.: Add advanced search functionality"
     validations:
       required: true
+
   - type: textarea
     id: need
     attributes:
@@ -30,6 +32,7 @@ body:
       placeholder: "Describe the problem this feature solves."
     validations:
       required: true
+
   - type: textarea
     id: solution
     attributes:
@@ -37,8 +40,11 @@ body:
       placeholder: "Describe how the feature could work."
     validations:
       required: true
+
   - type: textarea
     id: extra
     attributes:
       label: Additional Information
       placeholder: "Screenshots, references, examples..."
+    validations:
+      required: false
