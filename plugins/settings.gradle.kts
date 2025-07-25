@@ -1,4 +1,4 @@
-rootProject.name = "DevMinecraft"
+rootProject.name = "BabyCube"
 
 include(
     "plugins:welcome",

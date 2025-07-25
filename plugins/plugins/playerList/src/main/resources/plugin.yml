@@ -1,6 +1,6 @@
 name: playerList
 version: '1.0-SNAPSHOT'
-main: DevMinecraft.playerList.PlayerList
+main: BabyCube.playerList.PlayerList
 api-version: '1.21.8'
 authors: [ Lucas Madranges ]
 description: Plugin for customize the player list.

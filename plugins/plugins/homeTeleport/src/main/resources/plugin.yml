@@ -1,6 +1,6 @@
 name: homeTeleport
 version: '1.0-SNAPSHOT'
-main: DevMinecraft.homeTeleport.HomeTeleport
+main: BabyCube.homeTeleport.HomeTeleport
 api-version: '1.21'
 authors: [ Lucas Madranges ]
 description: Plugins for home teleport.
