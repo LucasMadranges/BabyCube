@@ -1,0 +1,30 @@
+name: 🏷 Add project label based on issue form
+
+on:
+  issues:
+    types: [ opened, edited ]
+
+permissions:
+  issues: write
+
+jobs:
+  label_issue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Add label based on project field
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const projectMatch = /project.*?:\s*(.+)/i.exec(context.payload.issue.body);
+            if (projectMatch) {
+              const project = projectMatch[1].trim();
+              const allowedLabels = ['AppWeb', 'Desktop', 'API', 'Minecraft', 'Docs'];
+              if (allowedLabels.includes(project)) {
+                await github.rest.issues.addLabels({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  issue_number: context.payload.issue.number,
+                  labels: [project]
+                });
+              }
+            }
