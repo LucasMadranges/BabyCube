@@ -1,6 +1,6 @@
 name: healPlayer
 version: '1.0-SNAPSHOT'
-main: DevMinecraft.healPlayer.healPlayer
+main: BabyCube.healPlayer.healPlayer
 api-version: '1.21.8'
 authors: [ Lucas Madranges ]
 description: Heal player.

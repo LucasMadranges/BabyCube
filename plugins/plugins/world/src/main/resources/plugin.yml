@@ -1,6 +1,6 @@
 name: World
 version: '1.0-SNAPSHOT'
-main: DevMinecraft.world.World
+main: BabyCube.world.World
 api-version: '1.21.8'
 authors: [ Lucas Madranges ]
 description: Plugin for generate and teleport into new world

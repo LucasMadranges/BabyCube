@@ -1,6 +1,6 @@
 name: catRain
 version: '1.0-SNAPSHOT'
-main: DevMinecraft.catRain.catRain
+main: BabyCube.catRain.catRain
 api-version: '1.21.8'
 authors: [ Lucas Madranges ]
 description: Rain of cat.

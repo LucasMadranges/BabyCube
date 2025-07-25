@@ -1,6 +1,6 @@
 name: antiJump
 version: '1.0-SNAPSHOT'
-main: DevMinecraft.antiJump.AntiJump
+main: BabyCube.antiJump.AntiJump
 api-version: '1.21.8'
 authors: [ Lucas Madranges ]
 description: Block the jump for players.

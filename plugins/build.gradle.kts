@@ -5,7 +5,7 @@ plugins {
     id("xyz.jpenilla.run-paper") version "2.3.1" apply false
 }
 
-group = "DevMinecraft"
+group = "BabyCube"
 version = "1.0-SNAPSHOT"
 
 repositories {
