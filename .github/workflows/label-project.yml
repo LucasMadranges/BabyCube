@@ -18,7 +18,7 @@ jobs:
             const projectMatch = /project.*?:\s*(.+)/i.exec(context.payload.issue.body);
             if (projectMatch) {
               const project = projectMatch[1].trim();
-              const allowedLabels = ['AppWeb', 'Desktop', 'API', 'Minecraft', 'Docs'];
+              const allowedLabels = ['Web', 'Mobile', 'Desktop', 'API', 'Minecraft', 'Docs'];
               if (allowedLabels.includes(project)) {
                 await github.rest.issues.addLabels({
                   owner: context.repo.owner,
