@@ -1,8 +1,0 @@
-include:
-  - plugins/docker-compose.yml
-
-networks:
-  networkBabyCube:
-    driver: bridge
-    name: networkBabyCube
-    
