@@ -6,7 +6,7 @@ By Lucas Madranges.
 The application is just a learn project, not a real project.
 
 The current repository is under MIT licence.
-[![License: MIT](https://img.shields.io/github/license/LucasMadranges/BabyCube)](https://github.com/LucasMadranges/BabyCube/blob/main/LICENSE)
+[![License: MIT](https://img.shields.io/github/license/LucasMadranges/BabyCube)](https://github.com/LucasMadranges/BabyCube/blob/main/.github/LICENSE)
 
 ## Summary
 
