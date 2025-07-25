@@ -78,7 +78,7 @@ class WorldEvent(private val plugin: JavaPlugin) : Listener {
 
             if (clicked.type == Material.IRON_SWORD) {
                 player.sendMessage("§aTéléportion vers pvp arena...")
-                player.teleport(Bukkit.getWorld("world")!!.spawnLocation)
+                player.teleport(Bukkit.getWorld("world_pvp_arena")!!.spawnLocation)
                 player.closeInventory()
             }
         }

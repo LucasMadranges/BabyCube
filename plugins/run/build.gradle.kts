@@ -20,6 +20,8 @@ tasks {
         from(project(":plugins:homeTeleport").tasks.named("shadowJar"))
         from(project(":plugins:world").tasks.named("shadowJar"))
         from(project(":plugins:doubleJump").tasks.named("shadowJar"))
+        // NOTE : Mini-games
+        from(project(":plugins:pvpArena").tasks.named("shadowJar"))
         into(layout.buildDirectory.dir("server/plugins"))
     }
 

@@ -1,0 +1,6 @@
+name: pvpArena
+version: '1.0-SNAPSHOT'
+main: BabyCube.pvpArena.PvpArena
+api-version: '1.21.8'
+authors: [ Lucas Madranges ]
+description: Plugins for PVP Arena mini-games
