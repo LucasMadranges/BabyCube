@@ -22,7 +22,7 @@ The current repository is under MIT licence.
   vip items
   or rank, forums, blogs and more.
 - **App Mobile** (Not yet) : Used for see the statistics of each activity, your profile, and purchase items.
-- **App Desktop** (Not yet) : Used as a launcher for players,. You can see your profile, ranks, and join the server.
+- **App Desktop** (Not yet) : Used as a launcher for players. You can see your profile, ranks, and join the server.
 - **Minecraft Server** : The Minecraft Server of the ecosystem.
 - **Discord Bot** (Not yet) : Used for announce server and minecraft news, check stats, minigames, and more.
 
