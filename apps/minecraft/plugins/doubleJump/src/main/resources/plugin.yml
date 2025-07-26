@@ -1,0 +1,16 @@
+name: doubleJump
+version: '1.0-SNAPSHOT'
+main: BabyCube.doubleJump.DoubleJump
+api-version: '1.21'
+authors: [ Lucas Madranges ]
+description: Player can now double jump !
+commands:
+  doublejump:
+    description: Soigne le joueur
+    usage: /<command>
+    permission: doublejump.usage
+
+permissions:
+  doublejump:
+    usage:
+      default: op

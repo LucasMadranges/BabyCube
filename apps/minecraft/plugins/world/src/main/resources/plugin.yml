@@ -1,0 +1,23 @@
+name: World
+version: '1.0-SNAPSHOT'
+main: BabyCube.world.World
+api-version: '1.21.8'
+authors: [ Lucas Madranges ]
+description: Plugin for generate and teleport into new world
+commands:
+  world:
+    description: Prefix for world plugin
+    usage: /<command>
+    permission: world.usage
+  spawn:
+    description: Teleport to spawn server
+    usage: /<command>
+    permission: spawn.usage
+
+permissions:
+  world:
+    usage:
+      default: op
+  spawn:
+    usage:
+      default: true

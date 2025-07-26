@@ -1,0 +1,6 @@
+name: WelcomePlugin
+version: '1.0-SNAPSHOT'
+main: BabyCube.welcomeMessage.Welcome
+api-version: '1.21.8'
+authors: [ Lucas Madranges ]
+description: Welcome message when user join the server.
