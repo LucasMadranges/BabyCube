@@ -3,5 +3,13 @@ BabyCube.iml
 .gradle
 .kotlin
 
+
 **/build/
 .*
+
+node_modules
+!.prettierignore
+!.prettierrc
+!.husky
+
+!.gitignore
