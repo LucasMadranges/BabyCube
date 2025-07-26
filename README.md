@@ -1,5 +1,7 @@
 [![License: MIT](https://img.shields.io/github/license/LucasMadranges/BabyCube)](https://github.com/LucasMadranges/BabyCube/blob/main/LICENSE)
 
+![BabyCube logo](./docs/img/logos/babycube-logo.png)
+
 # BabyCube Minecraft
 
 Minecraft server and microservices architecture for learning and some fun.
@@ -9,7 +11,7 @@ The application is just a learn project, not a real project.
 
 The current repository is under MIT licence.
 
-## Summary
+## 📊 Summary
 
 - [Applications](#applications)
 - [Stack](#stack)
@@ -17,7 +19,7 @@ The current repository is under MIT licence.
 - [How to start](#how-to-start-the-project)
     - [Minecraft Server](#minecraft-server)
 
-## Applications
+## 💻 Applications
 
 - **App Web** (Not yet) : Used for present the server, create user account or link it to the minecraft account, purchase
   vip items
@@ -27,7 +29,7 @@ The current repository is under MIT licence.
 - **Minecraft Server** : The Minecraft Server of the ecosystem.
 - **Discord Bot** (Not yet) : Used for announce server and minecraft news, check stats, minigames, and more.
 
-## Stack
+## 📚 Stack
 
 (non exhaustive list)
 
@@ -67,11 +69,11 @@ The current repository is under MIT licence.
     - ![Docker Badge](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff&style=for-the-badge)
     - ![TypeScript Badge](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=for-the-badge)
 
-## How to config the different env files
+## ⚙️ How to config the different env files
 
 (Not yet)
 
-## How to start the project
+## 🏁 How to start the project
 
 #### Minecraft Server
 
@@ -86,7 +88,7 @@ A console log should be open, wait for the server to start and go to **localhost
 This project is distributed with MIT license.  
 Free use, without any support.
 
-### 🤝 Contribution
+## 🤝 Contribution
 
 This repository is **public for demonstration**, so, i don't search for any contributions, sorry.  
 Thanks for understand.
