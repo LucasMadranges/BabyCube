@@ -1,6 +1,0 @@
-name: sideBar
-version: '1.0-SNAPSHOT'
-main: BabyCube.sideBar.SideBar
-api-version: '1.21.8'
-authors: [ Lucas Madranges ]
-description: Display sidebar with server info.
