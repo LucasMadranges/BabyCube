@@ -1,8 +1,6 @@
 [![License: MIT](https://img.shields.io/github/license/LucasMadranges/BabyCube)](https://github.com/LucasMadranges/BabyCube/blob/main/LICENSE)
 
-<div align="center">
 ![BabyCube logo](./docs/img/logos/babycube-logo.png)
-</div>
 
 # BabyCube Minecraft
 
