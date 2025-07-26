@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/github/license/LucasMadranges/BabyCube)](https://github.com/LucasMadranges/BabyCube/blob/main/LICENSE)
+
 # BabyCube Minecraft
 
 Minecraft server and microservices architecture for learning and some fun.
@@ -6,7 +8,6 @@ By Lucas Madranges.
 The application is just a learn project, not a real project.
 
 The current repository is under MIT licence.
-[![License: MIT](https://img.shields.io/github/license/LucasMadranges/BabyCube)](https://github.com/LucasMadranges/BabyCube/blob/main/LICENSE)
 
 ## Summary
 
