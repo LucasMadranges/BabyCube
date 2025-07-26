@@ -1,0 +1,16 @@
+name: invisible
+version: '1.0-SNAPSHOT'
+main: BabyCube.invisible.Invisible
+api-version: '1.21.8'
+authors: [ Lucas Madranges ]
+description: Made player invisible.
+commands:
+  invisible:
+    description: Made player invisible
+    usage: /<command>
+    permission: invisible.usage
+
+permissions:
+  invisible:
+    usage:
+      default: op

@@ -1,2 +1,7 @@
 .idea
 BabyCube.iml
+.gradle
+.kotlin
+
+**/build/
+.*
