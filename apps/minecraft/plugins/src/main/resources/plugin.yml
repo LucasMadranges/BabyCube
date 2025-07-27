@@ -1,0 +1,51 @@
+name: MainPlugin
+version: '1.0-SNAPSHOT'
+main: BabyCube.MainPlugin
+api-version: '1.21.8'
+authors: [ Lucas Madranges ]
+description: Main plugin for BabyCube Minecraft server.
+commands:
+  antijump:
+    description: Block the jump for players.
+    usage: /<command>
+    permission: opPermission.usage
+  catrain:
+    description: Create a rain of cat above the player.
+    usage: /<command>
+    permission: opPermission.usage
+  doublejump:
+    description: Give to the player boots for double jump.
+    usage: /<command>
+    permission: opPermission.usage
+  heal:
+    description: Heal the player.
+    usage: /<command>
+    permission: opPermission.usage
+  home:
+    description: Home commands.
+    usage: /<command>
+    permission: opPermission.usage
+  invisible:
+    description: Made player invisible
+    usage: /<command>
+    permission: opPermission.usage
+  rtp:
+    description: Teleport the player to a random location in a define zone.
+    usage: /<command>
+    permission: opPermission.usage
+  world:
+    description: Prefix for world plugin
+    usage: /<command>
+    permission: opPermission.usage
+  spawn:
+    description: Teleport to spawn server
+    usage: /<command>
+    permission: userPermission.usage
+
+permissions:
+  opPermission:
+    usage:
+      default: op
+  userPermission:
+    usage:
+      default: true
