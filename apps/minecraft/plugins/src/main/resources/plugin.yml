@@ -2,7 +2,7 @@ name: MainPlugin
 version: '1.0-SNAPSHOT'
 main: BabyCube.MainPlugin
 api-version: '1.21.8'
-authors: [ Lucas Madranges ]
+authors: [Lucas Madranges]
 description: Main plugin for BabyCube Minecraft server.
 commands:
   antijump:

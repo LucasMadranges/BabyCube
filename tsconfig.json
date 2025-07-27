@@ -11,12 +11,6 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "include": [
-    "apps/**/*"
-  ],
-  "exclude": [
-    "node_modules",
-    "dist",
-    ".next"
-  ]
+  "include": ["apps/**/*"],
+  "exclude": ["node_modules", "dist", ".next"]
 }

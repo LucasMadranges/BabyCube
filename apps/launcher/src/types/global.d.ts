@@ -1,9 +1,9 @@
 export {};
 
 declare global {
-    interface Window {
-        minecraft: {
-            launch: () => Promise<void>;
-        };
-    }
+  interface Window {
+    minecraft: {
+      launch: () => Promise<void>;
+    };
+  }
 }

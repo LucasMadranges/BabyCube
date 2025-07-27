@@ -15,3 +15,7 @@ node_modules/
 # Environnement
 .env
 *.log
+
+# Server
+apps/launcher/minecraft
+apps/minecraft/run
