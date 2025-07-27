@@ -18,6 +18,7 @@ import BabyCube.listeners.AntiJumpEvent
 import BabyCube.listeners.DoubleJumpEvent
 import BabyCube.listeners.WelcomeEvent
 import BabyCube.listeners.WorldEvent
+import BabyCube.minigames.pvpArena.PvpArenaManager
 import org.bukkit.WorldCreator
 import org.bukkit.plugin.java.JavaPlugin
 import java.io.File
@@ -29,7 +30,6 @@ class MainPlugin : JavaPlugin() {
 
     override fun onEnable() {
         loadWorlds()
-
 
         // NOTE : Commands
         getCommand("antijump")?.setExecutor(AntiJumpCommand(isAntiJumpEnabled))
@@ -62,6 +62,9 @@ class MainPlugin : JavaPlugin() {
 
         // NOTE : Databases
         db.onStart()
+
+        // NOTE : Minigames
+        PvpArenaManager.init(this)
     }
 
     fun loadWorlds() {
