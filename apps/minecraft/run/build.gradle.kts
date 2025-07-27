@@ -5,6 +5,10 @@ plugins {
 tasks {
     val cleanExtraPlugins by registering(Delete::class) {
         delete(file("run/plugins/.paper-remapped/extra-plugins"))
+        delete(file("run/world/session.lock"))
+        delete(file("run/world_nether/session.lock"))
+        delete(file("run/world_the_end/session.lock"))
+        delete(file("run/world_pvp_arena/session.lock"))
     }
 
     val copyPlugins by registering(Copy::class) {

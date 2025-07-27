@@ -30,7 +30,6 @@ class PositionsCommand(private val db: PositionsDB) : CommandExecutor, TabComple
                     GetAllPositions.getAllPositions(sender, db)
                 }
             }
-
         } else {
             sender.sendMessage("§cCette commande ne peut être utilisée que par un opérateur.")
         }

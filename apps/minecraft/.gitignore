@@ -9,6 +9,7 @@ maps
 /run/build/
 /run/logs
 /run/run/*
+/run/**/*.lock
 !run/run/eula.txt
 !run/run/server.properties
 !run/run/Dockerfile

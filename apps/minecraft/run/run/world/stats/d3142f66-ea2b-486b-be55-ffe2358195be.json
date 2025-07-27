@@ -3,24 +3,45 @@
     "minecraft:mined": {
       "minecraft:glass": 1
     },
-    "minecraft:dropped": {
-      "minecraft:compass": 2
+    "minecraft:custom": {
+      "minecraft:time_since_rest": 317696,
+      "minecraft:walk_one_cm": 57003,
+      "minecraft:leave_game": 86,
+      "minecraft:mob_kills": 2,
+      "minecraft:damage_taken": 3803,
+      "minecraft:damage_dealt": 237,
+      "minecraft:play_time": 396180,
+      "minecraft:jump": 599,
+      "minecraft:time_since_death": 317673,
+      "minecraft:drop": 2,
+      "minecraft:sprint_one_cm": 84387,
+      "minecraft:fall_one_cm": 48238,
+      "minecraft:total_world_time": 396180,
+      "minecraft:fly_one_cm": 587342,
+      "minecraft:walk_on_water_one_cm": 457,
+      "minecraft:crouch_one_cm": 3860,
+      "minecraft:sneak_time": 884,
+      "minecraft:climb_one_cm": 594,
+      "minecraft:deaths": 8
+    },
+    "minecraft:used": {
+      "minecraft:diamond_block": 6,
+      "minecraft:structure_block": 1,
+      "minecraft:barrier": 84,
+      "minecraft:oak_planks": 33,
+      "minecraft:quartz_block": 1,
+      "minecraft:test_block": 1,
+      "minecraft:iron_boots": 2,
+      "minecraft:iron_sword": 3,
+      "minecraft:smooth_stone_slab": 1
     },
     "minecraft:picked_up": {
       "minecraft:iron_boots": 1,
       "minecraft:white_wool": 1,
       "minecraft:compass": 3
     },
-    "minecraft:used": {
-      "minecraft:diamond_block": 5,
-      "minecraft:structure_block": 1,
-      "minecraft:barrier": 84,
-      "minecraft:oak_planks": 32,
-      "minecraft:quartz_block": 1,
-      "minecraft:test_block": 1,
-      "minecraft:iron_boots": 2,
-      "minecraft:iron_sword": 3,
-      "minecraft:smooth_stone_slab": 1
+    "minecraft:dropped": {
+      "minecraft:compass": 2
     },
     "minecraft:killed": {
       "minecraft:zombie": 1,
@@ -28,26 +49,6 @@
     },
     "minecraft:killed_by": {
       "minecraft:zombie": 2
-    },
-    "minecraft:custom": {
-      "minecraft:time_since_rest": 282909,
-      "minecraft:walk_one_cm": 52815,
-      "minecraft:leave_game": 82,
-      "minecraft:mob_kills": 2,
-      "minecraft:damage_taken": 3803,
-      "minecraft:damage_dealt": 237,
-      "minecraft:play_time": 361393,
-      "minecraft:jump": 454,
-      "minecraft:time_since_death": 282886,
-      "minecraft:drop": 2,
-      "minecraft:sprint_one_cm": 68645,
-      "minecraft:fall_one_cm": 48238,
-      "minecraft:total_world_time": 361393,
-      "minecraft:fly_one_cm": 490209,
-      "minecraft:walk_on_water_one_cm": 457,
-      "minecraft:crouch_one_cm": 3790,
-      "minecraft:sneak_time": 861,
-      "minecraft:deaths": 8
     }
   },
   "DataVersion": 4440
