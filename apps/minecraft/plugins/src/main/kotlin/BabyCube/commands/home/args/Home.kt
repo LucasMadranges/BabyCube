@@ -15,8 +15,6 @@ class Home(private val player: Player, private val db: HomeDB) {
             return null
         }
 
-        println(Bukkit.getWorlds())
-
         val world = Bukkit.getWorld(homeData["world"] as String)
         val x = (homeData["x"] as Double)
         val y = (homeData["y"] as Double)

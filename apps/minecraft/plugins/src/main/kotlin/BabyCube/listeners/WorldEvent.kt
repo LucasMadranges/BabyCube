@@ -2,6 +2,7 @@ package BabyCube.listeners
 
 import BabyCube.items.WorldItems
 import BabyCube.minigames.pvpArena.PvpArenaManager
+import BabyCube.utils.CreateCustomItem
 import net.kyori.adventure.text.Component
 import org.bukkit.Bukkit
 import org.bukkit.Material
@@ -14,7 +15,6 @@ import org.bukkit.event.player.PlayerDropItemEvent
 import org.bukkit.event.player.PlayerInteractEvent
 import org.bukkit.event.player.PlayerJoinEvent
 import org.bukkit.inventory.Inventory
-import org.bukkit.inventory.ItemStack
 import org.bukkit.persistence.PersistentDataType
 import org.bukkit.plugin.java.JavaPlugin
 
@@ -57,7 +57,10 @@ class WorldEvent(private val plugin: JavaPlugin) : Listener {
                 27,
                 Component.text("Menu Navigation")
             )
-            inv.setItem(13, ItemStack(Material.IRON_SWORD))
+            inv.setItem(
+                13,
+                CreateCustomItem.createItem(plugin, Material.IRON_SWORD, "join_arena", "Rejoindre l'arène PVP")
+            )
 
             event.player.openInventory(inv)
         }
@@ -79,7 +82,8 @@ class WorldEvent(private val plugin: JavaPlugin) : Listener {
 
             val clicked = event.currentItem ?: return
 
-            if (clicked.type == Material.IRON_SWORD) {
+            val key = NamespacedKey(plugin, "join_arena")
+            if (clicked.type == Material.IRON_SWORD && meta.persistentDataContainer.has(key, PersistentDataType.BYTE)) {
                 PvpArenaManager.joinArena(plugin, player as Player)
             }
         }

@@ -1,24 +1,18 @@
 package BabyCube
 
-import BabyCube.commands.AntiJumpCommand
-import BabyCube.commands.CatRainCommand
-import BabyCube.commands.DoubleJumpCommand
-import BabyCube.commands.HealPlayerCommand
-import BabyCube.commands.InvisibleCommand
-import BabyCube.commands.RandomTeleportCommand
+import BabyCube.commands.*
 import BabyCube.commands.home.HomeTeleportCommand
 import BabyCube.commands.world.WorldCommand
 import BabyCube.commands.world.WorldSpawnCommand
 import BabyCube.components.PlayerTabsUI
 import BabyCube.components.SideBarUI
 import BabyCube.databases.home.HomeDB
+import BabyCube.databases.home.PositionsDB
 import BabyCube.items.DoubleJumpItems
 import BabyCube.items.WorldItems
-import BabyCube.listeners.AntiJumpEvent
-import BabyCube.listeners.DoubleJumpEvent
-import BabyCube.listeners.WelcomeEvent
-import BabyCube.listeners.WorldEvent
+import BabyCube.listeners.*
 import BabyCube.minigames.pvpArena.PvpArenaManager
+import BabyCube.minigames.pvpArena.commands.PositionsCommand
 import org.bukkit.WorldCreator
 import org.bukkit.plugin.java.JavaPlugin
 import java.io.File
@@ -27,8 +21,12 @@ class MainPlugin : JavaPlugin() {
     var isAntiJumpEnabled: Boolean = false
     val doubleJumpBoots = DoubleJumpItems().enableDoubleJumpBoots(this)
     var db: HomeDB = HomeDB(this)
+    var positionsDB: PositionsDB = PositionsDB
 
     override fun onEnable() {
+        // NOTE : Databases
+        db.onStart()
+        positionsDB.onStart(this)
         loadWorlds()
 
         // NOTE : Commands
@@ -45,7 +43,10 @@ class MainPlugin : JavaPlugin() {
         getCommand("world")?.setExecutor(WorldCommand())
         getCommand("spawn")?.setExecutor(WorldSpawnCommand())
 
+        getCommand("positionsArena")?.setExecutor(PositionsCommand(positionsDB))
+
         // NOTE : Listeners
+        server.pluginManager.registerEvents(InventoryClick(), this)
         server.pluginManager.registerEvents(WelcomeEvent(), this)
         server.pluginManager.registerEvents(AntiJumpEvent(isAntiJumpEnabled), this)
         server.pluginManager.registerEvents(DoubleJumpEvent(this), this)
@@ -59,9 +60,6 @@ class MainPlugin : JavaPlugin() {
         // NOTE : Items
         DoubleJumpItems().enableDoubleJumpBoots(this)
         WorldItems().enableNavigationCompass(this)
-
-        // NOTE : Databases
-        db.onStart()
 
         // NOTE : Minigames
         PvpArenaManager.init(this)
