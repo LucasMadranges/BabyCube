@@ -52,6 +52,9 @@ class WelcomeEvent : Listener {
         val player = event.player
         val maxLength = 50
 
+        player.inventory.clear()
+        player.teleport(Bukkit.getWorld("world")!!.spawnLocation)
+
         LaunchFirework(player)
         Bukkit.getScheduler().runTaskLater(
             Bukkit.getPluginManager().getPlugin("MainPlugin")!!,

@@ -1,10 +1,12 @@
 package BabyCube.listeners
 
 import BabyCube.items.WorldItems
+import BabyCube.minigames.pvpArena.PvpArenaManager
 import net.kyori.adventure.text.Component
 import org.bukkit.Bukkit
 import org.bukkit.Material
 import org.bukkit.NamespacedKey
+import org.bukkit.entity.Player
 import org.bukkit.event.EventHandler
 import org.bukkit.event.Listener
 import org.bukkit.event.inventory.InventoryClickEvent
@@ -78,9 +80,7 @@ class WorldEvent(private val plugin: JavaPlugin) : Listener {
             val clicked = event.currentItem ?: return
 
             if (clicked.type == Material.IRON_SWORD) {
-                player.sendMessage("§aTéléportion vers pvp arena...")
-                player.teleport(Bukkit.getWorld("world_pvp_arena")!!.spawnLocation)
-                player.closeInventory()
+                PvpArenaManager.joinArena(plugin, player as Player)
             }
         }
     }
