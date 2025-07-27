@@ -13,7 +13,7 @@ The current repository is under MIT licence.
 
 ## 📊 Summary
 
-- [Applications](#applications)
+- [Applications](##applications)
 - [Stack](#stack)
 - [How to config](#how-to-config-the-different-env-files)
 - [How to start](#how-to-start-the-project)
@@ -68,6 +68,25 @@ The current repository is under MIT licence.
     - ![PostgreSQL Badge](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=fff&style=for-the-badge)
     - ![Docker Badge](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff&style=for-the-badge)
     - ![TypeScript Badge](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=for-the-badge)
+
+## 📁 App Architecture
+
+### Minecraft Server
+
+```
+plugins
+  src/main/kotlin/
+    Main.kt  # extends JavaPlugin
+    abilities/      # For classes, effects, powers
+    commands/       # Every minecraft commands
+    components/     # UI / HUD
+    database/       # Data management
+    hooks/          # Integration with others project
+    i18n/           # For multi-language
+    items/          # For custom items
+    listeners/      # Every minecraft events
+    utils/          # Shared features
+```
 
 ## ⚙️ How to config the different env files
 
