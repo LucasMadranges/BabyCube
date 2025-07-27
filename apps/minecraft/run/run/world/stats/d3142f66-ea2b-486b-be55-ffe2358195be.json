@@ -1,11 +1,15 @@
 {
   "stats": {
+    "minecraft:mined": {
+      "minecraft:glass": 1
+    },
+    "minecraft:dropped": {
+      "minecraft:compass": 2
+    },
     "minecraft:picked_up": {
       "minecraft:iron_boots": 1,
+      "minecraft:white_wool": 1,
       "minecraft:compass": 3
-    },
-    "minecraft:killed": {
-      "minecraft:zombie": 1
     },
     "minecraft:used": {
       "minecraft:diamond_block": 5,
@@ -15,35 +19,34 @@
       "minecraft:quartz_block": 1,
       "minecraft:test_block": 1,
       "minecraft:iron_boots": 2,
+      "minecraft:iron_sword": 3,
       "minecraft:smooth_stone_slab": 1
     },
-    "minecraft:dropped": {
-      "minecraft:compass": 2
-    },
-    "minecraft:mined": {
-      "minecraft:glass": 1
+    "minecraft:killed": {
+      "minecraft:zombie": 1,
+      "minecraft:sheep": 1
     },
     "minecraft:killed_by": {
       "minecraft:zombie": 2
     },
     "minecraft:custom": {
-      "minecraft:time_since_rest": 64090,
-      "minecraft:walk_one_cm": 30169,
-      "minecraft:leave_game": 41,
-      "minecraft:mob_kills": 1,
+      "minecraft:time_since_rest": 282909,
+      "minecraft:walk_one_cm": 52815,
+      "minecraft:leave_game": 82,
+      "minecraft:mob_kills": 2,
       "minecraft:damage_taken": 3803,
-      "minecraft:damage_dealt": 157,
-      "minecraft:play_time": 142574,
-      "minecraft:jump": 218,
-      "minecraft:time_since_death": 64067,
+      "minecraft:damage_dealt": 237,
+      "minecraft:play_time": 361393,
+      "minecraft:jump": 454,
+      "minecraft:time_since_death": 282886,
       "minecraft:drop": 2,
-      "minecraft:sprint_one_cm": 37704,
-      "minecraft:fall_one_cm": 46438,
-      "minecraft:total_world_time": 142574,
-      "minecraft:fly_one_cm": 169023,
+      "minecraft:sprint_one_cm": 68645,
+      "minecraft:fall_one_cm": 48238,
+      "minecraft:total_world_time": 361393,
+      "minecraft:fly_one_cm": 490209,
       "minecraft:walk_on_water_one_cm": 457,
       "minecraft:crouch_one_cm": 3790,
-      "minecraft:sneak_time": 845,
+      "minecraft:sneak_time": 861,
       "minecraft:deaths": 8
     }
   },

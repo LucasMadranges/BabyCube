@@ -41,6 +41,10 @@ commands:
     description: Teleport to spawn server
     usage: /<command>
     permission: userPermission.usage
+  positionsArena:
+    description: Set position on pvp arena.
+    usage: /<command>
+    permission: opPermission.usage
 
 permissions:
   opPermission:
