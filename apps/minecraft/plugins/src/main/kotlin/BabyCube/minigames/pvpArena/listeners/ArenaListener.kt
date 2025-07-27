@@ -16,6 +16,8 @@ import org.bukkit.persistence.PersistentDataType
 import org.bukkit.plugin.java.JavaPlugin
 
 class ArenaListener(private val plugin: JavaPlugin) : Listener {
+    var teleportTaskId: Int = -1 // Variable pour stocker l'ID de la tâche
+
     @EventHandler
     fun onPlayerInteract(event: PlayerInteractEvent) {
         val item = event.item ?: return
@@ -76,6 +78,15 @@ class ArenaListener(private val plugin: JavaPlugin) : Listener {
         ) {
             event.isCancelled = true
             val player = event.player
+
+            if (teleportTaskId != -1) {
+                cancelTeleport()
+                player.sendMessage(
+                    Component.text("§cTéléportation annulé.")
+                )
+                return
+            }
+            
             val position = GetAllPositions.getAllPositions(player, PositionsDB)?.random()
 
             if (position == null) {
@@ -93,14 +104,22 @@ class ArenaListener(private val plugin: JavaPlugin) : Listener {
             player.sendMessage(
                 Component.text("§aTéléportation dans l'arène en cours...")
             )
-            Bukkit.getScheduler().runTaskLater(
+
+            teleportTaskId = Bukkit.getScheduler().runTaskLater(
                 plugin,
                 Runnable {
                     player.teleport(location)
                     player.sendMessage("§aTéléportation réussie !")
                 },
                 60L
-            )
+            ).taskId
+        }
+    }
+
+    fun cancelTeleport() {
+        if (teleportTaskId != -1) {
+            Bukkit.getScheduler().cancelTask(teleportTaskId)
+            teleportTaskId = -1 // Réinitialise l'ID pour éviter des erreurs futures
         }
     }
 }
