@@ -1,3 +1,7 @@
+[![License: MIT](https://img.shields.io/github/license/LucasMadranges/BabyCube)](https://github.com/LucasMadranges/BabyCube/blob/main/LICENSE)
+
+![BabyCube logo](./docs/img/logos/babycube-logo.png)
+
 # BabyCube Minecraft
 
 Minecraft server and microservices architecture for learning and some fun.
@@ -6,17 +10,16 @@ By Lucas Madranges.
 The application is just a learn project, not a real project.
 
 The current repository is under MIT licence.
-[![License: MIT](https://img.shields.io/github/license/LucasMadranges/BabyCube)](https://github.com/LucasMadranges/BabyCube/blob/main/LICENSE)
 
-## Summary
+## 📊 Summary
 
-- [Applications](#applications)
+- [Applications](##applications)
 - [Stack](#stack)
 - [How to config](#how-to-config-the-different-env-files)
 - [How to start](#how-to-start-the-project)
-    - [Minecraft Server](#minecraft-server)
+  - [Minecraft Server](#minecraft-server)
 
-## Applications
+## 💻 Applications
 
 - **App Web** (Not yet) : Used for present the server, create user account or link it to the minecraft account, purchase
   vip items
@@ -26,50 +29,76 @@ The current repository is under MIT licence.
 - **Minecraft Server** : The Minecraft Server of the ecosystem.
 - **Discord Bot** (Not yet) : Used for announce server and minecraft news, check stats, minigames, and more.
 
-## Stack
+## 📚 Stack
 
 (non exhaustive list)
 
 - **App Web** :
-    - ![Next.js Badge](https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=fff&style=for-the-badge)
-    - ![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=for-the-badge)
-    - ![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=for-the-badge)
-        - ![Apollo GraphQL Badge](https://img.shields.io/badge/Apollo%20GraphQL-311C87?logo=apollographql&logoColor=fff&style=for-the-badge)
+  - ![Next.js Badge](https://img.shields.io/badge/Next.js-000?logo=nextdotjs&logoColor=fff&style=for-the-badge)
+  - ![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=for-the-badge)
+  - ![Tailwind CSS Badge](https://img.shields.io/badge/Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=fff&style=for-the-badge)
+  - ![Apollo GraphQL Badge](https://img.shields.io/badge/Apollo%20GraphQL-311C87?logo=apollographql&logoColor=fff&style=for-the-badge)
+  - ![Docker Badge](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff&style=for-the-badge)
+  - ![TypeScript Badge](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=for-the-badge)
 
 - **App Mobile** :
-    - ![React Native Badge](https://img.shields.io/badge/React%20Native-61DAFB?logo=react&logoColor=000&style=for-the-badge)
+  - ![Expo Badge](https://img.shields.io/badge/Expo-1C2024?logo=expo&logoColor=fff&style=for-the-badge)
+  - ![React Native Badge](https://img.shields.io/badge/React%20Native-61DAFB?logo=react&logoColor=000&style=for-the-badge)
+  - ![TypeScript Badge](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=for-the-badge)
 
 - **App Desktop** :
-    - ![Electron Badge](https://img.shields.io/badge/Electron-47848F?logo=electron&logoColor=fff&style=for-the-badge)
-    - ![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=for-the-badge)
+  - ![Electron Badge](https://img.shields.io/badge/Electron-47848F?logo=electron&logoColor=fff&style=for-the-badge)
+  - ![React Badge](https://img.shields.io/badge/React-61DAFB?logo=react&logoColor=000&style=for-the-badge)
+  - ![TypeScript Badge](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=for-the-badge)
 
 - **Gateway and microservices** :
-    - ![NestJS Badge](https://img.shields.io/badge/NestJS-E0234E?logo=nestjs&logoColor=fff&style=for-the-badge)
-    - ![GraphQL Badge](https://img.shields.io/badge/GraphQL-E10098?logo=graphql&logoColor=fff&style=for-the-badge)
-    - ![Prisma Badge](https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=fff&style=for-the-badge)
-    - ![Apollo GraphQL Badge](https://img.shields.io/badge/Apollo%20GraphQL-311C87?logo=apollographql&logoColor=fff&style=for-the-badge)
+  - ![NestJS Badge](https://img.shields.io/badge/NestJS-E0234E?logo=nestjs&logoColor=fff&style=for-the-badge)
+  - ![GraphQL Badge](https://img.shields.io/badge/GraphQL-E10098?logo=graphql&logoColor=fff&style=for-the-badge)
+  - ![Prisma Badge](https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=fff&style=for-the-badge)
+  - ![Apollo GraphQL Badge](https://img.shields.io/badge/Apollo%20GraphQL-311C87?logo=apollographql&logoColor=fff&style=for-the-badge)
+  - ![Docker Badge](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff&style=for-the-badge)
+  - ![TypeScript Badge](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=for-the-badge)
 
 - **Minecraft Server** :
-    - ![PaperMC Badge](https://img.shields.io/badge/PaperMC-000?logo=paperspace&logoColor=fff&style=for-the-badge)
+  - ![Kotlin Badge](https://img.shields.io/badge/Kotlin-7F52FF?logo=kotlin&logoColor=fff&style=for-the-badge)
+  - ![PaperMC Badge](https://img.shields.io/badge/PaperMC-000?logo=paperspace&logoColor=fff&style=for-the-badge)
+  - ![Gradle Badge](https://img.shields.io/badge/Gradle-02303A?logo=gradle&logoColor=fff&style=for-the-badge)
 
 - **Database** :
-    - ![PostgreSQL Badge](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=fff&style=for-the-badge)
+  - ![PostgreSQL Badge](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=fff&style=for-the-badge)
+  - ![Docker Badge](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff&style=for-the-badge)
+  - ![TypeScript Badge](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=fff&style=for-the-badge)
 
-- **Tools** :
-    - ![Docker Badge](https://img.shields.io/badge/Docker-2496ED?logo=docker&logoColor=fff&style=for-the-badge)
-    - ![Gradle Badge](https://img.shields.io/badge/Gradle-02303A?logo=gradle&logoColor=fff&style=for-the-badge)
+## 📁 App Architecture
 
-## How to config the different env files
+### Minecraft Server
+
+```
+plugins
+  src/main/kotlin/
+    Main.kt  # extends JavaPlugin
+    abilities/      # For classes, effects, powers
+    commands/       # Every minecraft commands
+    components/     # UI / HUD
+    database/       # Data management
+    hooks/          # Integration with others project
+    i18n/           # For multi-language
+    items/          # For custom items
+    listeners/      # Every minecraft events
+    utils/          # Shared features
+```
+
+## ⚙️ How to config the different env files
 
 (Not yet)
 
-## How to start the project
+## 🏁 How to start the project
 
 #### Minecraft Server
 
 Launch this command :
 
-```./plugins/gradlew clean build runServer```
+`./gradlew clean build runServer`
 
 A console log should be open, wait for the server to start and go to **localhost:25565** on Minecraft.
 
@@ -78,7 +107,7 @@ A console log should be open, wait for the server to start and go to **localhost
 This project is distributed with MIT license.  
 Free use, without any support.
 
-### 🤝 Contribution
+## 🤝 Contribution
 
 This repository is **public for demonstration**, so, i don't search for any contributions, sorry.  
 Thanks for understand.

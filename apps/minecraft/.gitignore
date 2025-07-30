@@ -1,0 +1,18 @@
+# Project exclude paths
+/.gradle/
+/build/
+/.idea/
+/.kotlin/
+
+# Run - World
+maps
+/run/build/
+/run/logs
+/run/run/*
+/run/**/*.lock
+!run/run/eula.txt
+!run/run/server.properties
+!run/run/Dockerfile
+
+!run/run/world
+!run/run/world_pvp_arena
