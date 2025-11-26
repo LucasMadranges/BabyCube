@@ -5,11 +5,9 @@ BabyCube.iml
 
 
 **/build/
-.*
 
 node_modules
 !.prettierignore
 !.prettierrc
 !.husky
-
 !.gitignore
