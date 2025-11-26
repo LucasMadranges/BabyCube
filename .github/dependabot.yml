@@ -3,6 +3,7 @@ updates:
   # Dépendances npm
   - package-ecosystem: "npm"
     directory: "/"
+    target-branch: "develop"
     schedule:
       interval: "weekly"
-    target-branch: "develop"
+    open-pull-requests-limit: 0
