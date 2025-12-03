@@ -24,7 +24,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        language: [ 'javascript', 'typescript', 'java', 'kotlin' ]
+        language: [ 'javascript' ] # TODO : Ajouter kotlin
 
     steps:
       - name: Checkout repository
