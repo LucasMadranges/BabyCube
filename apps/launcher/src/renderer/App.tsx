@@ -7,7 +7,7 @@ export default function App() {
       <h1>🚀 Launcher React + Electron</h1>
       <p>Bienvenue dans ton app React embarquée dans Electron !</p>
       <Counter />
-      <p>------------------------------</p>
+      <p>-----------------------------------</p>
       <LauncherButton />
     </div>
   );
