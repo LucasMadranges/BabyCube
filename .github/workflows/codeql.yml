@@ -1,0 +1,113 @@
+name: Security Scanning (CodeQL + Semgrep + Snyk)
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+  schedule:
+    - cron: "0 3 * * *" # Scan quotidien
+  workflow_dispatch:
+
+jobs:
+  # ------------------------------------------------------------
+  # 1. CODEQL — Analyse SAST profonde
+  # ------------------------------------------------------------
+  codeql:
+    name: CodeQL Analysis
+    runs-on: ubuntu-latest
+    permissions:
+      security-events: write
+      actions: read
+      contents: read
+
+    strategy:
+      fail-fast: false
+      matrix:
+        language: [ 'javascript', 'typescript', 'go', 'java', 'kotlin' ]
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v3
+        with:
+          languages: ${{ matrix.language }}
+
+      - name: Autobuild
+        uses: github/codeql-action/autobuild@v3
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v3
+
+
+  # ------------------------------------------------------------
+  # 2. SEMGREP — Scan rapide + règles custom
+  # ------------------------------------------------------------
+  semgrep:
+    name: Semgrep Scan
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Semgrep
+        uses: returntocorp/semgrep-action@v1
+        with:
+          config: |
+            p/ci
+            p/security-audit
+            p/java
+            p/go
+            p/javascript
+            p/kotlin
+          generateSarif: "1"
+
+      - name: Upload SARIF to GitHub Code Scanning
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: semgrep.sarif
+
+
+  # ------------------------------------------------------------
+  # 3. SNYK — Analyse des vulnérabilités de dépendances + SAST
+  # ------------------------------------------------------------
+  snyk:
+    name: Snyk Scan (SCA + Code)
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      security-events: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # SNYK AUTH — nécessite un secret dans GitHub
+      - name: Authenticate Snyk
+        run: |
+          npm install -g snyk
+          snyk auth ${{ secrets.SNYK_TOKEN }}
+
+      # Analyse des dépendances (npm, Go, Gradle, etc.)
+      - name: Snyk SCA (dependencies)
+        run: snyk test --all-projects --sarif-file-output=snyk-sca.sarif || true
+
+      - name: Upload SCA results
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: snyk-sca.sarif
+
+      # Analyse du code (Snyk Code si tu veux le complément)
+      - name: Snyk Code (SAST)
+        run: snyk code test --sarif-file-output=snyk-code.sarif || true
+
+      - name: Upload Snyk Code SARIF
+        uses: github/codeql-action/upload-sarif@v3
+        with:
+          sarif_file: snyk-code.sarif
